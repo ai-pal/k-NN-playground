@@ -6,9 +6,12 @@ function onScoreUpdate(dropPosition, bounciness, size, bucketLabel) {
 }
 
 function runAnalysis() {
-    const bucket =
+    const [testSet, trainingSet] = splitDataSet(outputs, 10);
 
-        console.log("Your ball probably fall into ", bucket);
+    for (let i = 0; i < testSet.length; i++) {
+        const bucket = knn(trainingSet, testSet[i][0]);
+        console.log(bucket, testSet[i][3]);
+    }
 }
 
 function knn(data, point) {
