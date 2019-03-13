@@ -15,7 +15,7 @@ Initially we will collect the following data of balls.
 
 Then we will use our `knn` algorithm to predict the bucket of a ball drop from determined position.
 
-## K-NN Algorithm
+## K-NN Algorithm using Lodash
 
 ```js
 function knn(data, point, k) {
